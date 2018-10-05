@@ -12,8 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
-
+    @IBAction func button(_ sender: Any) {
+        print("Hello there!")
+    }
+    
 }
 
