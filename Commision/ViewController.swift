@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var totalPayLabel: UILabel!
     
+    let basePay: Int = 500
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,11 @@ class ViewController: UIViewController {
 
 
     @IBAction func calculateOnTapped(_ sender: UIButton) {
+    }
+    
+    func getInput() -> Double
+    {
+        return 3.14
     }
     
     
