@@ -23,10 +23,16 @@ class ViewController: UIViewController {
 
 
     @IBAction func calculateOnTapped(_ sender: UIButton) {
+        getInput()
     }
     
     func getInput() -> Double
     {
+        if let commissionPay = commissionPayTextField.text, let pay = Double(commissionPay) {
+            print("Has data and can be turned into a decimal")
+        } else {
+            print("No data or can't be turned into a decimal")
+        }
         return 3.14
     }
     
