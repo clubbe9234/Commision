@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var commissionPayTextField: UITextField!
     
     @IBOutlet weak var totalPayLabel: UILabel!
@@ -20,20 +20,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
-
+    
+    
     @IBAction func calculateOnTapped(_ sender: UIButton) {
-        getInput()
+        let commissionPay = getInput()
+        let totalPay = Double(basePay) + commissionPay
+        totalPayLabel.text = "Total Pay = $\(totalPay)"
     }
     
     func getInput() -> Double
     {
         if let commissionPay = commissionPayTextField.text, let pay = Double(commissionPay) {
-            print("Has data and can be turned into a decimal")
+            return pay
         } else {
-            print("No data or can't be turned into a decimal")
+            return 0
         }
-        return 3.14
     }
     
     
